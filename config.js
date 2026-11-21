@@ -16,7 +16,7 @@ const CONFIG = {
       "nom": "Esprit Dev",
       "lieu": "Thiès",
       "whatsapp": "221767587977",
-      "code": "Mouha221",
+      "code": "1111",
       "superAdmin": true,
       "actif": true
     },
@@ -24,13 +24,13 @@ const CONFIG = {
       "nom": "LastDead",
       "lieu": "Dakar",
       "whatsapp": "221761834342",
-      "code": "Mouzbady"
+      "code": "2222"
     },
     {
       "nom": "Mouhamed",
       "lieu": "Dakar",
       "whatsapp": "221774400347",
-      "code": "Mouhamed 2027"
+      "code": "5555"
     }
   ],
   "produitsInitiaux": [
