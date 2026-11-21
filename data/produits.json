@@ -1,13 +1,5 @@
 [
   {
-    "id": "p1",
-    "titre": "Compte Flexity Premium",
-    "prix": 15000,
-    "description": "Compte complet, accès aux jeux premium, livraison rapide.",
-    "vendu": false,
-    "media": null
-  },
-  {
     "id": "p3",
     "titre": "Compte Flexity Elite",
     "prix": 25000,
