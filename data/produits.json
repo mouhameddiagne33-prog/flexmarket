@@ -1,14 +1,5 @@
 [
   {
-    "id": "p1795267940079",
-    "titre": "compt niveau 105",
-    "prix": 6000,
-    "description": "",
-    "vendu": false,
-    "media": "media/p1795267940079.mp4",
-    "ajoutePar": "Esprit Dev"
-  },
-  {
     "id": "p1795269299508",
     "titre": "Compt flex",
     "prix": 15000,
