@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vendre un compte — Flex Market SN</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-veil" aria-hidden="true"></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><img src="assets/logo.jpg" alt="Logo Flex Market SN"><span>Flex Market <b>SN</b></span></a>
+  <nav id="menu" class="menu">
+    <a href="catalogue.html">Catalogue</a>
+    <a href="commandes.html">Commandes</a>
+    <a href="vendre.html">Vendre un compte</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="section">
+    <h2 class="reveal">Vendre un compte</h2>
+    <p class="lead reveal" style="margin-left:0">Tu as un compte Flexity à vendre ? Choisis un admin, appelle-le ou envoie ton message directement.</p>
+    <div class="admins" data-admins></div>
+
+    <form id="formVente" class="card form reveal">
+      <label>Admin à contacter
+        <select id="selAdmin" required></select>
+      </label>
+      <label>Titre du compte <input id="vTitre" required placeholder="Ex. Compte Flexity Premium"></label>
+      <label>Prix souhaité (FCFA) <input id="vPrix" type="number" min="0" required></label>
+      <label>Description <textarea id="vDesc" rows="3" placeholder="Niveau, jeux, objets..."></textarea></label>
+      <button class="btn primary" type="submit">Envoyer sur WhatsApp</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span class="annee"></span> Flex Market SN · <b>76 758 79 77</b></p>
+  <a href="admin.html" class="small">Espace admin</a>
+</footer>
+
+<script src="config.js"></script>
+<script src="transition.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

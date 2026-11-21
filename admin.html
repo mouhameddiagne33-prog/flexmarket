@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin — Flex Market SN</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+  .admin-wrap{padding:110px 5% 60px;max-width:1100px;margin:0 auto}
+  .login{max-width:380px;margin:12vh auto;text-align:center}
+  .login input,.adm-form input,.adm-form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:var(--txt);margin-top:6px}
+  .adm-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:34px}
+  .adm-form label{font-size:.9rem;color:var(--mut);display:flex;flex-direction:column}
+  .adm-form .full{grid-column:1/-1}
+  .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+  .list .card{display:flex;flex-direction:column;gap:8px}
+  .msg{color:var(--c);font-size:.9rem;margin-top:8px}
+  .ok{color:var(--b)}
+  .danger{border-color:var(--c);color:var(--c)}
+  .adm-line{display:grid;grid-template-columns:1fr 1fr 1.2fr 90px auto auto;gap:8px;align-items:center}
+  .adm-line input{padding:10px;border-radius:10px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:var(--txt);width:100%}
+  .adm-line .chk{font-size:.85rem;color:var(--mut);display:flex;gap:6px;align-items:center}
+  @media(max-width:600px){.adm-form{grid-template-columns:1fr}.adm-line{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page-veil" aria-hidden="true"></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<header class="topbar">
+  <a href="index.html" class="brand"><img src="assets/logo.jpg" alt=""><span>Flex Market <b>SN</b> · Admin</span></a>
+  <button class="btn small ghost" id="btnSortir" hidden>Quitter</button>
+</header>
+
+<main class="admin-wrap">
+  <!-- Connexion -->
+  <section id="login" class="card login">
+    <h2>Connexion admin</h2>
+    <p class="small">Entre ton code personnel.</p>
+    <form id="formLogin" style="margin-top:18px">
+      <input id="code" type="password" inputmode="numeric" placeholder="Code personnel" required autocomplete="off">
+      <input id="token" type="password" placeholder="Token GitHub" required autocomplete="off" style="margin-top:10px">
+      <button class="btn primary" style="margin-top:14px;width:100%">Entrer</button>
+      <p id="erreur" class="msg" hidden>Code incorrect.</p>
+    </form>
+  </section>
+
+  <!-- Espace admin -->
+  <section id="espace" hidden>
+    <p class="small" style="margin-bottom:20px">Connecté : <b id="qui"></b></p>
+    <h2>Ajouter un compte</h2>
+    <form id="formAjout" class="card adm-form" style="margin-top:18px">
+      <label>Titre <input id="titre" required placeholder="Compte Flexity Premium"></label>
+      <label>Prix (FCFA) <input id="prix" type="number" min="0" required></label>
+      <label class="full">Description <textarea id="desc" rows="3"></textarea></label>
+      <label class="full">Photo ou vidéo (vidéo max 2 minutes)
+        <input id="fichier" type="file" accept="image/*,video/*" required>
+      </label>
+      <button class="btn primary full" type="submit">Publier au catalogue</button>
+      <p id="msg" class="msg full" hidden></p>
+    </form>
+
+    <h2>Comptes publiés</h2>
+    <div id="liste" class="list" style="margin-top:18px"></div>
+    <p id="msgListe" class="msg" hidden></p>
+  </section>
+
+  <!-- Gestion des admins (super admin uniquement) -->
+  <section id="gestion" class="card" hidden style="margin-top:40px">
+    <h2>Gestion des admins</h2>
+    <p class="small" style="margin:8px 0 18px">Modifie les infos, décoche « Actif » pour bloquer un admin (il ne peut plus se connecter et disparaît du site), ajoute ou supprime. Puis clique sur <b>Publier sur le site</b>.</p>
+    <div id="listeAdmins" class="list" style="grid-template-columns:1fr;gap:12px"></div>
+    <div class="cta" style="margin-top:18px;gap:10px;justify-content:flex-start">
+      <button class="btn ghost" id="ajouterAdmin" type="button">+ Ajouter un admin</button>
+      <button class="btn primary" id="exporterConfig" type="button">Publier sur le site</button>
+    </div>
+    <p id="msgGestion" class="msg" hidden></p>
+  </section>
+</main>
+
+<script src="config.js"></script>
+<script src="transition.js"></script>
+<script src="github.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

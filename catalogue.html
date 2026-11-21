@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catalogue — Flex Market SN</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-veil" aria-hidden="true"></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="topbar">
+  <a href="index.html" class="brand"><img src="assets/logo.jpg" alt="Logo Flex Market SN"><span>Flex Market <b>SN</b></span></a>
+  <nav id="menu" class="menu">
+    <a href="catalogue.html">Catalogue</a>
+    <a href="commandes.html">Commandes</a>
+    <a href="vendre.html">Vendre un compte</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="section">
+    <h2 class="reveal">Catalogue</h2>
+    <div class="filters reveal">
+      <button data-f="tous" class="on">Tous</button>
+      <button data-f="dispo">Disponibles</button>
+      <button data-f="vendu">Vendus</button>
+    </div>
+    <div id="grille" class="grid"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span class="annee"></span> Flex Market SN · <b>76 758 79 77</b></p>
+  <a href="admin.html" class="small">Espace admin</a>
+</footer>
+
+<script src="config.js"></script>
+<script src="transition.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
