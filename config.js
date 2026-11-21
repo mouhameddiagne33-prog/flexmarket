@@ -16,7 +16,7 @@ const CONFIG = {
       "nom": "Esprit Dev",
       "lieu": "Thiès",
       "whatsapp": "221767587977",
-      "code": "1111",
+      "code": "6692",
       "superAdmin": true,
       "actif": true
     },
