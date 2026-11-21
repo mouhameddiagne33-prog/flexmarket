@@ -24,7 +24,7 @@ const CONFIG = {
       "nom": "LastDead",
       "lieu": "Dakar",
       "whatsapp": "221761834342",
-      "code": "2222"
+      "code": "1811"
     },
     {
       "nom": "Mouhamed",
