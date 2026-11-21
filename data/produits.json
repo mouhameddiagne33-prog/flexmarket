@@ -8,14 +8,6 @@
     "media": null
   },
   {
-    "id": "p2",
-    "titre": "Compte Flexity Starter",
-    "prix": 7500,
-    "description": "Idéal pour débuter, prêt à jouer.",
-    "vendu": false,
-    "media": null
-  },
-  {
     "id": "p3",
     "titre": "Compte Flexity Elite",
     "prix": 25000,
