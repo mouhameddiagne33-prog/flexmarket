@@ -4,6 +4,13 @@ const WA = (num, msg = "") => `https://wa.me/${num}?text=${encodeURIComponent(ms
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const ADMINS = CONFIG.admins.filter(x => x.actif !== false);
 
+/* Numéro qui reçoit la commande : l'admin qui a publié le compte (sinon le numéro principal) */
+function contactDe(x) {
+  if (x.adminWhatsapp) return x.adminWhatsapp;
+  const a = ADMINS.find(y => y.nom === x.ajoutePar);
+  return a ? a.whatsapp : CONFIG.whatsappPrincipal;
+}
+
 /* Catalogue publié sur le site */
 async function getProduits() {
   try {
@@ -93,7 +100,7 @@ async function rendreCatalogue() {
         <b class="prix">${esc(x.prix)} ${CONFIG.devise}</b>
         ${x.vendu ? '<span class="btn small ghost">Vendu</span>' :
           `<a class="btn small primary" target="_blank" rel="noopener"
-             href="${WA(CONFIG.whatsappPrincipal, `Bonjour, je veux commander : ${x.titre} (${x.prix} ${CONFIG.devise})`)}">Commander</a>`}
+             href="${WA(contactDe(x), `Bonjour, je veux commander : ${x.titre} (${x.prix} ${CONFIG.devise})`)}">Commander</a>`}
       </div>
     </article>`;
   }).join("") : '<p class="small">Aucun compte dans cette catégorie.</p>';
