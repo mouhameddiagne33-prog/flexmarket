@@ -25,13 +25,6 @@ const CONFIG = {
       "lieu": "Dakar",
       "whatsapp": "221761834342",
       "code": "1811"
-    },
-    {
-      "nom": "Mouhamed",
-      "lieu": "Dakar",
-      "whatsapp": "221774400347",
-      "code": "5555",
-      "actif": false
     }
   ],
   "produitsInitiaux": [
