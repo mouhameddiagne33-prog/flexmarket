@@ -30,7 +30,8 @@ const CONFIG = {
       "nom": "Mouhamed",
       "lieu": "Dakar",
       "whatsapp": "221774400347",
-      "code": "5555"
+      "code": "5555",
+      "actif": false
     }
   ],
   "produitsInitiaux": [
